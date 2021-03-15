@@ -2,14 +2,13 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.List;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbConfig;
 import javax.json.bind.spi.JsonbProvider;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import test.FlexibleMimeTypeJsonbDeserializer;
@@ -35,6 +34,7 @@ public class JsonbDeserializingTest {
 	}
 
 	@Test
+	@Ignore
 	public void testStaticMimeTypeJsonbDeserializer() throws Exception {
 		System.out.println("parse with StaticMimeTypeJsonbDeserializer");
 		JsonbConfig config = new JsonbConfig().withDeserializers(new StaticMimeTypeJsonbDeserializer()).withNullValues(true);
